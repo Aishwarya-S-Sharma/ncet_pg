@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block title %}Page2{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% endblock %}
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center">Terms & Conditions</h1>
+        
+        <!-- Terms & Conditions Section -->
+        <div class="alert alert-info">
+            <strong>Reporting, Refund and Cancellation Policy:</strong>
+            <ul>
+                <li>Reporting must be done within 2 weeks of seat booking or else the seat automatically becomes eligible for direct cancellation.</li>
+                <li>Any amount paid below Rs. 15,000 is non-refundable.</li>
+                <li>Any amount paid above Rs. 15,000 will be refunded after deducting a cancellation charge of Rs. 15,000.</li>
+                <li>Any Candidate who does not complete the reporting procedure within two weeks of seat booking, the seat automatically becomes eligible for direct cancellation.</li>
+                <li>No refund will be provided if a candidate cancels the seat after reporting. Only documents will be handed over in such cases.</li>
+                <li>Note: Admission is provisional and subject to approval of Bengaluru City University.</li>
+                <li>Incomplete applications are liable to be rejected.</li>
+            </ul>
+        </div>
+
+        <!-- Fee Structure Section -->
+        <div class="alert alert-info">
+            <strong>Fee Structure:</strong>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Year-Wise Payment</th>
+                        <th>Amount (In Rs)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st Year Booking Amount at the time of joining</td>
+                        <td>25,000</td>
+                    </tr>
+                    <tr>
+                        <td>Balance Semester Amount to be paid within 2 weeks of seat booking</td>
+                        <td>As per fee structure</td>
+                    </tr>
+                    <tr>
+                        <td>Second-semester fees to be paid before the beginning of the second semester</td>
+                        <td>As per fee structure</td>
+                    </tr>
+                    <tr>
+                        <td>Second year onwards, the full semester fee is to be paid before the commencement of every semester</td>
+                        <td>As per fee structure</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Declaration Section -->
+        <h2>Declaration</h2>
+        <form method="POST">
+            <!-- Applicant Declaration -->
+            <div class="form-group">
+                <label for="applicant_declaration">I certify that all the statements made in this application for admission to NDC are correct and that the information furnished is complete. I agree to abide by all rules and regulations, Terms & Conditions that are now, or may be in the future, in force, at the institute. I understand that withholding or giving false information will make me ineligible for admission at NDC.</label>
+                <textarea class="form-control" id="applicant_declaration" rows="3" name="applicant_declaration" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="applicant_place">Place:</label>
+                <input type="text" class="form-control" id="applicant_place" name="applicant_place" required>
+            </div>
+            <div class="form-group">
+                <label for="applicant_date">Date:</label>
+                <input type="date" class="form-control" id="applicant_date" name="applicant_date" required>
+            </div>
+            <div class="form-group">
+                <label for="applicant_signature">Signature of the Applicant:</label>
+                <input type="text" class="form-control" id="applicant_signature" name="applicant_signature" required>
+            </div>
+
+            <!-- Parent Declaration -->
+            <h2>Parent Declaration</h2>
+            <div class="form-group">
+                <label for="parent_declaration">I have read the application in detail and have no objection to my Son / Daughter taking admission to the NDC PG Programme. I also understand that the fees are to be paid in time and is subject to change as per the decision of the management. I also understand that in case my Son/Daughter discontinues the course I am liable to pay the complete programme fees.</label>
+                
+            </div>
+            <div class="form-group">
+                <label for="parent_place">Place:</label>
+                <input type="text" class="form-control" id="parent_place" name="parent_place" required>
+            </div>
+            <div class="form-group">
+                <label for="parent_date">Date:</label>
+                <input type="date" class="form-control" id="parent_date" name="parent_date" required>
+            </div>
+            <div class="form-group">
+                <label for="parent_signature">Parent/Guardian's Signature:</label>
+                <input type="text" class="form-control" id="parent_signature" name="parent_signature" required>
+            </div>
+
+            <!-- Application Fee Section -->
+            <h2>Application Form Fee (Non-Refundable)</h2>
+            <ul>
+                <li>Indian: 500/-</li>
+                <li>NRI: 2000/-</li>
+                <li>Foreign National: USD 50</li>
+            </ul>
+
+            <!-- Office Use Section -->
+            <h2>For Office Use Only</h2>
+            <div class="form-group">
+                <label for="receipt_date">Date of receipt of Application:</label>
+                <input type="date" class="form-control" id="receipt_date" name="receipt_date">
+            </div>
+            <div class="form-group">
+                <label for="receipt_no">Receipt No:</label>
+                <input type="text" class="form-control" id="receipt_no" name="receipt_no">
+            </div>
+            <div class="form-group">
+                <label for="acknowledgment_sent">Acknowledgment sent on:</label>
+                <input type="date" class="form-control" id="acknowledgment_sent" name="acknowledgment_sent">
+            </div>
+            <div class="form-group">
+                <label for="documents_missing">Documents missing:</label>
+                <input type="text" class="form-control" id="documents_missing" name="documents_missing">
+            </div>
+            <div class="form-group">
+                <label for="application_verified_by">Application verified by:</label>
+                <input type="text" class="form-control" id="application_verified_by" name="application_verified_by">
+            </div>
+            <div class="form-group">
+                <label for="verification_date">Date:</label>
+                <input type="date" class="form-control" id="verification_date" name="verification_date">
+            </div>
+            <div class="form-group">
+                <label for="test_scores">Test Scores:</label>
+                <input type="text" class="form-control" id="test_scores" name="test_scores">
+            </div>
+            <div class="form-group">
+                <label for="prescribed_fees">Prescribed Fees:</label>
+                <input type="text" class="form-control" id="prescribed_fees" name="prescribed_fees">
+            </div>
+            <div class="form-group">
+                <label for="selection_status">Selected / Not Selected:</label>
+                <input type="text" class="form-control" id="selection_status" name="selection_status">
+            </div>
+            <div class="form-group">
+                <label for="decision_date">Decisions notified to applicant on:</label>
+                <input type="date" class="form-control" id="decision_date" name="decision_date">
+            </div>
+            <div class="form-group">
+                <label for="director_signature">Signature of the Director:</label>
+                <input type="text" class="form-control" id="director_signature" name="director_signature">
+            </div>
+            <div class="form-group">
+                <label for="admission_head_signature">Signature Head of Admission:</label>
+                <input type="text" class="form-control" id="admission_head_signature" name="admission_head_signature">
+            </div>
+            <div class="form-group">
+                <label>Website:</label>
+                <p>www.nagarjunadegreecollege.in</p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}

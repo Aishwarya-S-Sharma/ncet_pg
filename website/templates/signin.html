@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Signin{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/signin.css') }}">
+{% endblock %}
+{% block content %}
+    <h2>Signin to Your Account</h2>
+    <form action="{{ url_for('auth.signin') }}" method="POST">
+        <div class="form-group">
+            <label for="application_number">Application Number</label>
+            <input type="text" id="application_number" name="application_number" class="input-field" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="input-field" required>
+        </div>
+
+        <button type="submit" class="btn">Signin</button>
+        <div>
+            <br/>
+            <a href="{{url_for('auth.forgot_application_number')}}">Forgot Application number?</a>
+            <br/>
+            <br/>
+            <a href="{{url_for('auth.forgot_password')}}">Forgot Password?</a>
+        </div>
+    </form>
+{% endblock %}

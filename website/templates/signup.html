@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Signup{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h2>Create an Account</h2>
+    <form action="{{ url_for('auth.signup') }}" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="input-field" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="input-field" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="input-field" required>
+        </div>
+        <h1>Note:Upon creating your account, you will receive an application number, which you can use to sign in.</h1>
+        <br/>
+        <button type="submit" class="btn">Signup</button>
+    
+{% endblock %}

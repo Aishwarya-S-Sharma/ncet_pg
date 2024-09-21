@@ -1,0 +1,6 @@
+flask-mail
+flask
+pymongo
+Flask-WTF
+reportlab
+gunicorn
